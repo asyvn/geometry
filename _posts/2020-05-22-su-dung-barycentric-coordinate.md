@@ -8,7 +8,7 @@ tags: [asymptote, barycentric]
 
 Sử dụng **barycentric coordinate** để viết hàm liên quan đến tam giác được gọn gàng hơn. Sau đây là ví dụ về hàm xác định **tâm nội tiếp**, và **tâm ngoại tiếp** của 3 điểm A, B, C:
 
-```cpp   
+```asy   
 pair incenter(pair A, pair B, pair C){
 	real a=abs(B-C), b=abs(C-A), c=abs(A-B);
 	return (a*A + b*B +c*C)/(a+b+c);
