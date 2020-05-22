@@ -7,7 +7,7 @@ title: Asymptote VN
 description: Một số code asymptote.
 
 # Your name to show in the footer
-author: Tran Quan
+author: Trần Quân
 
 # --- List of links in the navigation bar --- #
 
@@ -172,6 +172,7 @@ paginate: 5
 
 kramdown:
   input: GFM
+  math_engine: mathjax
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
