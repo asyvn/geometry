@@ -185,6 +185,7 @@ defaults:
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
       readtime: false # add estimated reading time on all blog posts
+      # ext-js: "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
   -
     scope:
       path: "" # all files
