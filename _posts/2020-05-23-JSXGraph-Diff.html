@@ -1,0 +1,57 @@
+---
+layout: post
+title: JSXGraph Differentiability.
+subtitle: 
+cover-img:
+tags: [jsxgraph]
+---
+<head>
+    <link rel="stylesheet" type="text/css" href="../jsxgraph.css" />
+    <script type="text/javascript" charset="UTF-8"
+    src="../jsxgraphcore.js">
+    </script>
+</head>
+
+<div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
+<script type="text/javascript">
+ board = JXG.JSXGraph.initBoard('box', {
+    boundingbox: [-5, 10, 7, -6], 
+    axis: true,
+    showClearTrace: true,
+    showFullscreen: true});
+
+var p = [];
+p[0] = board.create('point', [-1,0], {withLabel: false, size:2, color:'blue'});
+p[1] = board.create('point', [-0.5,3], {withLabel: false, size:2, color:'blue'});
+p[2] = board.create('point', [2,0.5], {withLabel: false, size:2, color:'blue'});
+p[3] = board.create('point', [6, 3], {withLabel: false, size:2, color:'blue'});
+var pol = JXG.Math.Numerics.lagrangePolynomial(p);
+var graph = board.create('functiongraph', [pol, -10, 10], {strokeWidth: 2, name:"f", withLabel: true});
+
+var x0 = board.create('glider', [1, 0, board.defaultAxes.x], {name: 'x_0', size:4});
+var fx0 = board.create('point', [
+                function() { return x0.X(); }, 
+                function() { return pol(x0.X()); }
+          ], {name: '', color: 'grey', fixed: true, size:3});
+var x = board.create('glider', [5, 0, board.defaultAxes.x], {name: 'x', size:4});
+var fx = board.create('point', [
+                function() { return x.X(); }, 
+                function() { return pol(x.X()); }
+          ], {name: '', color: 'grey', fixed: true, size:3});
+var line = board.create('line',[fx0, fx],{strokeColor:'#ff0000',dash:2});
+
+var f1 = board.create('point', [
+        function() { return x.X(); },
+        function() { return (fx.Y()-fx0.Y())/(fx.X()-fx0.X() + 0.0000001); }],
+        { size: 1, name: 'f_1', color: 'black', fixed: true, trace: true});
+    
+var txt = board.create('text', [0.5, 7, function() { 
+        return '( ' + 
+               fx.Y().toFixed(2) + ' - (' + fx0.Y().toFixed(2) + 
+               ') ) / ( ' + 
+               fx.X().toFixed(2) + ' - (' + fx0.X().toFixed(2) +
+               ') ) = ' + ((fx.Y()-fx0.Y())/(fx.X()-fx0.X())).toFixed(3);
+    }]);
+
+board.create('functiongraph',[JXG.Math.Numerics.D(pol)], {dash: 2, name:"f'", withLabel: true});
+</script>
