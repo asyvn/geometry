@@ -5,30 +5,14 @@ subtitle:
 cover-img:
 tags: [jsxgraph]
 ---
+<head>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.00.0/jsxgraph.css" />
+    <script type="text/javascript" charset="UTF-8"
+    src="//cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.00.0/jsxgraphcore.js">
+    </script>
+</head>
 
-
-// This is all variable in project
-// This is for high performent
-var doc = document
-
-// This is jxgbox id
-var box = doc.getElementById("jxgbox")
-
-// This is width, height of jxgbox
-const wid = box.offsetWidth;
-const hei = box.offsetHeight;
-
-// This is unit of coordinate
-var axisX = 8;
-var axisY = Math.round((axisX * hei / wid) * 100) / 100;
-
-// This create new coordinate
-var brd = JXG.JSXGraph.initBoard("jxgbox", {
-    renderer: 'canvas',
-    axis: false,
-    boundingbox: [-axisX, axisY, axisX, -axisY],
-    showCopyright: false
-});
-
-
-<div id="jxgbox" class="position jxgbox"></div>
+<div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
+<script type="text/javascript">
+ var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-10, 10, 10, -10], axis:true});
+</script>
