@@ -1,0 +1,34 @@
+---
+layout: post
+title: JSXGraph test 05.
+subtitle: 
+cover-img:
+tags: [jsxgraph]
+---
+
+
+// This is all variable in project
+// This is for high performent
+var doc = document
+
+// This is jxgbox id
+var box = doc.getElementById("jxgbox")
+
+// This is width, height of jxgbox
+const wid = box.offsetWidth;
+const hei = box.offsetHeight;
+
+// This is unit of coordinate
+var axisX = 8;
+var axisY = Math.round((axisX * hei / wid) * 100) / 100;
+
+// This create new coordinate
+var brd = JXG.JSXGraph.initBoard("jxgbox", {
+    renderer: 'canvas',
+    axis: false,
+    boundingbox: [-axisX, axisY, axisX, -axisY],
+    showCopyright: false
+});
+
+
+<div id="jxgbox" class="position jxgbox"></div>
