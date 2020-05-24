@@ -1,3 +1,11 @@
+---
+layout: post
+title: Thử highlight asy code.
+subtitle: 
+cover-img:
+tags: [asymptote, geometry]
+---
+
 ```asymptote
 pair [] p, m;
 
