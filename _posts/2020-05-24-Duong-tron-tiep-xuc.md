@@ -11,7 +11,9 @@ Cho tam giác $\triangle ABC$. Dựng đường tròn tiếp xúc ngoài với 3
 Cách dựng như sau: Gọi H là trực tâm tam giác ABC, D là chân đường cao từ A lên BC.
 
 1 - Dựng đường tròn (Ka) tiếp xúc với đoạn HB, HC và tiếp xúc trong với (BC) (đường tròn Protasov).
+
 2 - Nghịch đảo (Ka) qua phép nghịch đảo tâm A, tỷ số AH.AD được đường tròn IN.
+
 3 - Nghịch đảo (IN) qua phép nghịch đảo tâm H, tỷ số HA.HD được đường tròn OUT.
 
 ```asy
