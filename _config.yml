@@ -176,6 +176,7 @@ encoding: UTF-8
 kramdown:
   input: GFM
   math_engine: mathjax
+  syntax_highlighter: rouge
 
 extra_javascript:
   ../jsxgraphcore.js
