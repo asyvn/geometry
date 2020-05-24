@@ -6,7 +6,7 @@ cover-img:
 tags: [asymptote, geometry]
 ---
 
-```asy
+```asymptote
 pair [] p, m;
 
 real s=abs(a-b)/3;
