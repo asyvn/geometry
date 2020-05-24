@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Đường tròn tiếp xúc với bq đường tròn khác
+title: Đường tròn tiếp xúc với ba đường tròn khác
 subtitle: 
 cover-img:
 tags: [asymptote, tangents]
