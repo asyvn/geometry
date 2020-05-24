@@ -6,7 +6,7 @@ cover-img:
 tags: [asymptote, geometry]
 ---
 
-```asymptote
+```cpp
 pair [] p, m;
 
 real s=abs(a-b)/3;
