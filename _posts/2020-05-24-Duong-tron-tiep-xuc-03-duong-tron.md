@@ -45,4 +45,4 @@ circle cout=invH*cin; draw(cout, blue+dashed);
 
 dot(A^^B^^C^^D^^H, Fill(white));
 ```
-![alt](...assets/img/circleto3c.jpg)
+![Kết quả](../assets/img/circleto3c.jpg)
